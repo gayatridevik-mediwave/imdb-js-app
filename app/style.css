@@ -11,12 +11,15 @@ body {
 
 .list {
   display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
 }
 
 .item {
-  max-width: 300px;
   border: 1px solid grey;
   border-radius: 5px;
   padding: 5px;
   margin-left: 5px;
+  margin-top: 5px;
 }
