@@ -1,17 +1,3 @@
-const movieList = [
-  {
-    id: 1641812427583,
-    name: "The Matrix",
-    year: 1998,
-    rating: "3",
-    genre: "Scifi, Thriller",
-    image: {
-      url: "https://i.pravatar.cc/300",
-      altInfo: "Matrix DVD cover",
-    },
-  },
-];
-
 function makeStars(count) {
   let stars = "";
   for (let i = 0; i < count; i++) {
@@ -64,5 +50,21 @@ function makeMovieListHTML(movies) {
   }
 }
 
+function addLoading() {
+  const listDiv = document.querySelector("#movie-list");
+  listDiv.innerHTML = "⏳ Please wait ...";
+}
+
+function getMoviesFromAPI() {
+  addLoading();
+  fetch("http://localhost:1337/api/movies")
+    .then(function (result) {
+      return result.json();
+    })
+    .then(function (data) {
+      makeMovieListHTML(data);
+    });
+}
+
 // --- start
-makeMovieListHTML(movieList);
+getMoviesFromAPI();
