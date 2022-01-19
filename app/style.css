@@ -8,7 +8,6 @@ body {
   margin: 0 auto;
 }
 
-
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -22,4 +21,13 @@ body {
   padding: 5px;
   margin-left: 5px;
   margin-top: 5px;
+}
+
+.item > img {
+  height: 300px;
+  width: 250px;
+}
+
+.item > h4, .item > p {
+  margin: 0
 }
