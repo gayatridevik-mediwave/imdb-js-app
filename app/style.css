@@ -23,11 +23,11 @@ body {
   margin-top: 5px;
 }
 
-.item > img {
+.item img {
   height: 300px;
   width: 250px;
 }
 
-.item > h4, .item > p {
+.item h4, .item p {
   margin: 0
 }
